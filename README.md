@@ -48,23 +48,9 @@ or
 #### Data Download and Preparation
 Instructions for downloading the data in `data/README.md`.
 
-## 🗺️ Start an active learning experiment
+## 🚅 Perform Active Learning and Evaluate
 
-this section is going down
-
-sdfsdfsdf: 
-```bash
- python run.py --taxa_id 130714
-```
-Here, `--taxa_id` is the id number for a species of interest from [iNaturalist](https://www.inaturalist.org/taxa/130714). If you want to generate predictions for a random species, add the `--rand_taxa` instead. 
-
-Note, before you run this command you need to first download the data as described in `data/README.md`. In addition, if you want to evaluate some of the pretrained models from the paper, you need to download those first and place them at `sinr/pretrained_models`. See `web_app/README.md` for more details.
-
-There is also an interactive browser-based demo available in `web_app`.
-
-## 🚅 Training and Evaluating Models
-
-To train and evaluate an active sampling process, run the following command from within the `active_sampling` directory:
+To perform and evaluate an active sampling process, run the following command from within the `active_sampling` directory:
 ```bash
  python run.py
 ```
@@ -72,7 +58,7 @@ To train and evaluate an active sampling process, run the following command from
 #### Hyperparameters
 Common parameters such as `sampling_method` and `update_method` can be set from the command line when calling `run.py`, or by changing the defaults within the `run.py` file. 
 
-All other parameters such as local directory locations may be set in `config.json`. 
+All other parameters such as local directory paths may be set in `config.json`. 
 
 #### Outputs
 By default, experiment results will be saved to the `results` directory. 
@@ -87,10 +73,10 @@ Global Strategic Collaboration Awards.
 
 If you find our work useful in your research please consider citing our paper.  
 ```
-@inproceedings{SINR_icml23,
-  title     = {{Spatial Implicit Neural Representations for Global-Scale Species Mapping}},
-  author    = {Cole, Elijah and Van Horn, Grant and Lange, Christian and Shepard, Alexander and Leary, Patrick and Perona, Pietro and Loarie, Scott and Mac Aodha, Oisin},
-  booktitle = {ICML},
+@inproceedings{active_SDM_2023,
+  title     = {{Active Learning-Based Species Range Estimation}},
+  author    = {Lange, Christian and Cole, Elijah and Van Horn, Grant and Mac Aodha, Oisin},
+  booktitle = {NeurIPS},
   year = {2023}
 }
 ```
