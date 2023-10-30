@@ -22,8 +22,8 @@
         "SNT": "../data/500_SNT_taxa.npy"
     },
     "gt_data": {
-        "IUCN": "../data_from_sinr_repo/eval/iucn/iucn_res_5.json",
-        "SNT": "../data_from_sinr_repo/eval/snt/snt_res_5.npy"
+        "IUCN": "../data/iucn/iucn_res_5.json",
+        "SNT": "../data/snt/snt_res_5.npy"
     },
     "eval_type": {
         "IUCN": "IUCN",
