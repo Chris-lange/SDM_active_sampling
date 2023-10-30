@@ -1,10 +1,10 @@
 # Active Learning-Based Species Range Estimation - NEURIPS 2023
 
+![Model Prediction](images/comic_strip.png)
+
 Code for training and evaluating global-scale active learning based species range estimation models. This code enables the recreation of the results from our NEURIPS 2023 paper [Active Learning-Based Species Range Estimation](). 
 
 ## 🌍 Overview
-
-![Model Prediction](images/comic_strip.png)
 
 We propose a new active learning approach for efficiently estimating the geographic
 range of a species from a limited number of on the ground observations. We
