@@ -1,0 +1,37 @@
+{
+    "model_path": "../backbone/models/no_cap_coord_active_sample_backbone.pt",
+    "use_linear_model": 0,
+    "batch_size": 1024,
+    "env_loc": "",
+    "save_dir": "../results",
+    "ocean_mask_loc": "../data/ocean_mask_hr.npy",
+    "init_data_loc": {
+        "IUCN": [
+            "../data/init_data/iucn_init_1.npz",
+            "../data/init_data/iucn_init_2.npz",
+            "../data/init_data/iucn_init_3.npz"
+        ],
+        "SNT": [
+            "../data/init_data/snt_init_1.npz",
+            "../data/init_data/snt_init_2.npz",
+            "../data/init_data/snt_init_3.npz"
+        ]
+    },
+    "taxa_list_loc": {
+        "IUCN": "../data/500_IUCN_taxa.npy",
+        "SNT": "../data/500_SNT_taxa.npy"
+    },
+    "gt_data": {
+        "IUCN": "../data_from_sinr_repo/eval/iucn/iucn_res_5.json",
+        "SNT": "../data_from_sinr_repo/eval/snt/snt_res_5.npy"
+    },
+    "eval_type": {
+        "IUCN": "IUCN",
+        "SNT": "SNT"
+    },
+    "seeds": [
+        999,
+        1000,
+        1001
+    ]
+}
