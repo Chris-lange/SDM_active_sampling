@@ -48,6 +48,11 @@ or
 #### Data Download and Preparation
 Instructions for downloading the data in `data/README.md`.
 
+#### Backbone Models
+
+Backbone models used in the paper are ['SINR'](https://arxiv.org/abs/2306.02564) implicit neural representations. Code for training these models can be found [here](https://github.com/elijahcole/sinr).
+For the paper, species used for active learning experiments are filtered out of the training set.
+
 ## 🚅 Perform Active Learning and Evaluate
 
 To perform and evaluate an active sampling process, run the following command from within the `active_sampling` directory:
