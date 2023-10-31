@@ -15,7 +15,7 @@ if __name__ == "__main__":
     args = vars(parser.parse_args())
 
     print("This is a small script to generate per iteration figures from the paper. You may have to adjust "
-          "various matplotlib and other settings in for perfect results.")
+          "various matplotlib and other settings inside this script for perfect results.")
 
     # Create separate dictionary for each experiment's results
     exp_dict = defaultdict(list)
@@ -72,8 +72,7 @@ if __name__ == "__main__":
 
     # For setting the order of the experiments and corresponding labels
     # Fill this in with the names of your experiments and the order you want them to appear in the legend
-    # experiment_order = ['WA_HSS_PLUS', 'WA_HSS', 'WA_UNC', 'WA_RANDOM', 'LR_HSS', 'LR_UNC', 'LR_RANDOM']
-    experiment_order = ['LR_RANDOM']
+    experiment_order = ['WA_HSS_PLUS', 'WA_HSS', 'WA_UNC', 'WA_RANDOM', 'LR_HSS', 'LR_UNC', 'LR_RANDOM']
 
     # To translate from experiment file names to the name you want in the legend
     experiment_labels = {
@@ -92,8 +91,9 @@ if __name__ == "__main__":
     # set serif font
     plt.rcParams['font.family'] = 'serif'
     # Plot the baseline if available
-    an_full_1000_map = 0.73581165 # THIS IS CURRENTLY OUTDATED - maybe replace with uncapped as well.
-    plt.plot([an_full_1000_map]*100, linestyle='--', color='k',  label='AN_FULL_E2E_OUTDATED')
+    an_full_all_best_map = 0.76043 # IUCN
+    # an_full_all_best_map = 0.77843 # SNT
+    plt.plot([an_full_all_best_map]*100, linestyle='--', color='k',  label='AN_FULL_E2E')
 
     # plot the results
     for i, experiment_name in enumerate(experiment_order):
@@ -115,7 +115,7 @@ if __name__ == "__main__":
     plt.xlabel('Time')
     plt.ylabel('MAP')
     plt.xlim(0, 50)
-    plt.ylim(0.3, 0.9)
+    plt.ylim(0.3, 0.8)
     plt.title(f'{args["title"]}', fontsize = 14)
 
     # Draw the legend and save the plot

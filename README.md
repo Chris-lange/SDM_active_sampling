@@ -1,8 +1,8 @@
-# Active Learning-Based Species Range Estimation - NEURIPS 2023
+# Active Learning-Based Species Range Estimation - NeurIPS 2023
 
-![Model Prediction](images/comic_strip.png)
+![Model Prediction](images/overview.jpg)
 
-Code for training and evaluating global-scale active learning based species range estimation models. This code enables the recreation of the results from our NEURIPS 2023 paper [Active Learning-Based Species Range Estimation](). 
+Code for training and evaluating global-scale active learning based species range estimation models. This code enables the recreation of the results from our NeurIPS 2023 paper [Active Learning-Based Species Range Estimation](). 
 
 ## 🌍 Overview
 
@@ -46,12 +46,15 @@ or
 ```
 
 #### Data Download and Preparation
-Instructions for downloading the data in `data/README.md`.
+Instructions for downloading the data can be found in `data/README.md`.
 
 #### Backbone Models
 
-Backbone models used in the paper are ['SINR'](https://arxiv.org/abs/2306.02564) implicit neural representations. Code for training these models can be found [here](https://github.com/elijahcole/sinr).
-For the paper, species used for active learning experiments are filtered out of the training set.
+Backbone models used in the paper are ['SINR'](https://arxiv.org/abs/2306.02564) implicit neural representations with all species in either of the evaluation datasets filtered out of the training data.
+
+Instructions for downloading pretrained models can be found in `data/README.md`.
+
+ Code for training SINR models from scratch can be found [here](https://github.com/elijahcole/sinr).
 
 ## 🚅 Perform Active Learning and Evaluate
 
