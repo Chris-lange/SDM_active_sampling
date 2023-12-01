@@ -2,7 +2,7 @@
 
 ![Model Prediction](images/overview.jpg)
 
-Code for training and evaluating global-scale active learning based species range estimation models. This code enables the recreation of the results from our NeurIPS 2023 paper [Active Learning-Based Species Range Estimation](). 
+Code for training and evaluating global-scale active learning based species range estimation models. This code enables the recreation of the results from our NeurIPS 2023 paper [Active Learning-Based Species Range Estimation](https://arxiv.org/abs/2311.02061). 
 
 ## 🌍 Overview
 
