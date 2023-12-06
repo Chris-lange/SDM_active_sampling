@@ -45,8 +45,6 @@ class UpdateStrategy:
     def weighted_average_update(self, base_model, active_sampling_model, additional_classifiers):
         base_model.eval()
 
-        weights_array = np.zeros((500,44181))
-
         # Perform logistic regression update on additional classifiers if they exist (I.e. for WA_HSS+)
         if additional_classifiers is not None:
             additional_classifiers = self.update_additional_classifiers(additional_classifiers)
@@ -98,7 +96,6 @@ class UpdateStrategy:
                 all_class_weights = np.array(base_model.class_emb.weight.cpu().detach())
 
             # Combine classifiers according to their weights
-            weights_array[class_idx,:] = combined_probs
             new_class_weight = np.average(all_class_weights, axis=0, weights=combined_probs)
             active_sampling_model.class_emb.weight.data[class_idx, :] = torch.from_numpy(new_class_weight).to(self.args['device'])
 
