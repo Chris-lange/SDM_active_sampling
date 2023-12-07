@@ -1,4 +1,6 @@
 import argparse
+import sys
+sys.path.append('../')
 from active_sampling import active_sampler
 
 # visualizes predictions made by trained active sampling model and plots sampled data
